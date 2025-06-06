@@ -25,9 +25,11 @@ WinPMEM{https://winpmem.velocidex.com/} is a widely-used, Windows-based memory d
 Ghidra{https://ghidra-sre.org/} is a powerful open-source reverse engineering framework developed by the NSA, offering a comprehensive set of tools for disassembling, analyzing, and decompiling binary executables. Unlike commercial tools like IDA Pro, Ghidra is free to use and provides a user-friendly graphical interface, supporting Windows, Linux, and macOS. It features advanced static analysis capabilities, including disassembly, decompilation, control flow graph analysis, function identification, and data type reconstruction. Ghidra's intuitive decompiler converts machine code into high-level pseudo-code, and it supports extensibility through Java or Python scripting for task automation. With built-in debugger integration, Ghidra eliminates the need for third-party debuggers and supports multiple processor architectures and binary formats. Additionally, its symbolic execution and advanced analysis tools help identify vulnerabilities and trace potential exploits, making it a versatile and accessible tool for reverse engineering.
 
 
+**5. Content of EPDict**
+
 **Essential Processes**
 
-The list of all essential processes are listed in Table
+The list of all essential processes including System Processes and Kernel processes are listed here.
 
 1. System Idle Process:  Represents the portion of CPU time when the computer is idle. It's a placeholder that uses CPU resources when no other processes are executing. 
 2. System: The core kernel process of Windows. It's responsible for managing system resources, hardware abstraction, and general system operations.
@@ -58,5 +60,55 @@ The list of all essential processes are listed in Table
 27. makecab.exe: A command-line utility for creating CAB files, which are used for packaging and compressing files.
 28. TrustedInstaller.exe: The service that installs, modifies, and removes system components and Windows updates.
 29. TiWorker.exe: Windows Modules Installer Worker. It is responsible for installing and updating system components and updates.
-30. WmiPrvSE.exe (WMI Provider Host): Hosts Windows Management Instrumentation (WMI) providers, which provide management and monitoring capabilities.			
+30. WmiPrvSE.exe (WMI Provider Host): Hosts Windows Management Instrumentation (WMI) providers, which provide management and monitoring capabilities.
 
+**User-Facing Applications and System Utilities**
+
+These processes are associated with user applications and the management of the Windows user interface and their description are mentioned here.
+
+1. OneDriveSetup.exe:A setup process for OneDrive, Microsoft's cloud storage service. It installs OneDrive and sets up its synchronization.
+2. PhotosApp.exe: The Windows Photos app used for viewing and editing images and videos on the system.
+3. SystemSettings.exe: The Settings app in Windows 10, used to configure system preferences, network settings, and more.
+4. UserOOBEBroker.exe: Part of the Out-Of-Box Experience (OOBE) process that runs during initial setup of the system, helping users configure their system preferences.
+5. WerFault.exe: Windows Error Reporting, which collects error data from failed programs or system components and reports it to Microsoft.
+6. WindowsPackageManagerServer.exe: A service related to Windows Package Manager (winget), which is used for installing and managing apps from the command line.
+7. winpmem\_mini.exe: A lightweight version of winpmem (a memory acquisition tool) for capturing memory dumps.
+8. PhotosService.exe: Supports the Photos app, managing background tasks related to photo management and display.
+9. msedgewebview2.exe: A process related to Microsoft Edge WebView2, allowing Edge-based web content to be embedded into other apps.
+10. FileCoAuth.exe: Part of Office that enables real-time collaborative editing in Office documents stored in the cloud.
+11. SearchApp.exe: Manages search functionality within the Windows operating system, especially for Cortana and the search box in the Start Menu.
+12. ctfmon.exe: Handles alternative input devices, such as speech recognition or handwriting input, and the language bar.
+13. audiodg.exe: The Audio Device Graph Isolation process, which manages audio effects like enhancements or virtual sound processing.
+14. StartMenuExperienceHost .exe: A background process that manages the Start Menu experience in Windows 10.
+15. smartscreen.exe: Windows SmartScreen, which helps protect the system by preventing access to unsafe websites and applications.
+16. SecurityHealthSystray.exe: A tray icon that shows the security status of your system, such as antivirus status and firewall settings.
+17. ApplicationFrameHost.exe: Hosts modern Windows Store (UWP) applications, allowing them to run within their own windows.
+18. TextInputHost.exe: Manages the Text Input framework, supporting virtual keyboards and alternative text input methods.
+19. cmd.exe: The Command Prompt, a command-line interface for interacting with the operating system.
+20. conhost.exe: The Console Window Host, which manages the graphical elements of the command prompt.
+21. SearchProtocolHost.exe: A background process that handles search indexing and filters content for the Windows search feature.
+22. SearchFilterHost.exe: Works with SearchProtocolHost.exe to process and filter search results.
+
+**Security and Maintenance Tools**
+
+These processes are associated with security, maintenance, and system health. and their description are mentioned here.
+1. MpDefenderCoreService.exe: Core service of Microsoft Defender Antivirus that runs in the background to protect the system.
+2. MpCmdRun.exe: A command-line utility for managing Microsoft Defender, allowing you to run scans and perform other security-related tasks.
+3. sppsvc.exe: The Software Protection Platform Service, ensuring that Windows is activated and licensed.
+4. DeviceCensus.exe: Collects device information for telemetry and compatibility purposes, helping Microsoft improve the system.
+5. RuntimeBroker.exe: Ensures that UWP apps do not misuse system resources by managing permissions and access controls.
+6. MicrosoftEdgeUpdate.exe: Manages updates for the Microsoft Edge browser.
+7. SgrmBroker.exe: Part of the security feature ``Windows Defender System Guard," which helps protect against system tampering.
+8. ShellExperienceHost.exe: Hosts the Windows Shell experience, including elements like the taskbar, start menu, and action center.
+9. OneDrive.exe: The OneDrive client for cloud file synchronization between your computer and Microsoft's cloud storage.
+10. Microsoft.SharePoint.exe: A process related to Microsoft SharePoint, often part of enterprise collaboration tools that integrate with the Office 365 suite.
+11. PhoneExperienceHost.exe: Part of the integration between a Windows PC and a mobile device (e.g., the "Your Phone" app for syncing data with smartphones).
+
+**User-Installed and Miscellaneous Applications**
+
+These processes are generally associated with third-party applications that are installed on the system, Some processes are related to specialized functions or utilities within Windows and their description are mentioned here.
+1. WinRAR.exe: A file compression utility, commonly used to open and create RAR and ZIP files.
+2. python.exe / py.exe:These are the executables for Python, a popular programming language. python.exe runs Python scripts, while py.exe is used as a launcher for Python scripts.
+3. msedge.exe: The main process for the Microsoft Edge browser, which is used for web browsing.
+4. HxTsr.exe: Associated with the Office Hub app, part of the Microsoft 365 suite.
+5. MemCompression: Handles the compression of data in memory to free up system resources.
