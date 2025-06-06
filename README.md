@@ -25,3 +25,65 @@ WinPMEM{https://winpmem.velocidex.com/} is a widely-used, Windows-based memory d
 Ghidra{https://ghidra-sre.org/} is a powerful open-source reverse engineering framework developed by the NSA, offering a comprehensive set of tools for disassembling, analyzing, and decompiling binary executables. Unlike commercial tools like IDA Pro, Ghidra is free to use and provides a user-friendly graphical interface, supporting Windows, Linux, and macOS. It features advanced static analysis capabilities, including disassembly, decompilation, control flow graph analysis, function identification, and data type reconstruction. Ghidra's intuitive decompiler converts machine code into high-level pseudo-code, and it supports extensibility through Java or Python scripting for task automation. With built-in debugger integration, Ghidra eliminates the need for third-party debuggers and supports multiple processor architectures and binary formats. Additionally, its symbolic execution and advanced analysis tools help identify vulnerabilities and trace potential exploits, making it a versatile and accessible tool for reverse engineering.
 
 
+**Essential Processes**
+
+The list of all essential processes are listed in Table
+
+1. System Idle Process:  Represents the portion of CPU time when the computer is idle. It's a placeholder that uses CPU resources when no other processes are executing. 
+		
+2. System: The core kernel process of Windows. It's responsible for managing system resources, hardware abstraction, and general system operations.
+3. Registry: This refers to the Windows Registry, where the system stores configuration settings and options. It's not typically a standalone process but represents the part of the operating system that handles system configuration.
+4. smss.exe (Session Manager Subsystem): Initializes the system environment during boot, sets up the user session, and starts critical system processes like wininit.exe and csrss.exe.
+5. csrss.exe (Client/Server Runtime Subsystem): Manages user-mode system processes, such as creating and deleting threads, and managing console windows.
+
+6. 
+		wininit.exe& Initializes the Windows environment after boot, setting up services and running system processes like services.exe.\\ \hline
+		%
+		winlogon.exe& Handles user logon and logoff, managing the login screen and securing access to the system.\\ \hline
+		%
+		services.exe (Service Control Manager)& Manages Windows services, starting, stopping, and managing background processes.\\ \hline
+		%
+		lsass.exe (Local Security Authority Subsystem Service)&Handles security policies, user authentication, and Active Directory management.\\ \hline
+		%
+		svchost.exe& A generic host process that runs Windows services. Multiple instances of svchost.exe run at the same time, each hosting a different group of services.\\ \hline
+		%
+		fontdrvhost.exe& Manages font loading and rendering on the system, associated with the font subsystem.\\ \hline
+		%
+		spoolsv.exe (Print Spooler)& Handles print jobs by queuing them for printing in the background.\\ \hline
+		%
+		rundll32.exe& A utility that runs functions stored in dynamic-link libraries (DLLs). It’s often used to launch system utilities and other applications that use DLLs.\\ \hline
+		%
+		wuauclt.exe (Windows Update AutoUpdate Client)& Manages the download and installation of Windows updates.\\ \hline
+		%
+		MoUsoCoreWorker.exe& A background process related to the installation and maintenance of modern (UWP) updates in Windows 10. \\ \hline
+		%
+		MsMpEng.exe& The core process of Microsoft Defender Antivirus that performs real-time protection against malware and other security threats.\\ \hline
+		%
+		SearchIndexer.exe& Indexes files on the system to improve the performance of Windows search.\\ \hline
+		%
+		explorer.exe& The Windows File Explorer, which provides the graphical user interface (GUI) for managing files, folders, and launching applications.\\ \hline
+		%
+		RuntimeBroker.exe&Manages app permissions for Universal Windows Platform (UWP) apps, ensuring that they do not misuse system resources.\\ \hline
+		%
+		SecurityHealthService.exe& Monitors the health of Windows security services, ensuring that the firewall and antivirus are enabled, among other things.\\ \hline
+		%
+		dwm.exe (Desktop Window Manager)& Manages visual effects on the desktop, such as transparency, window composition, and rendering of desktop items.\\ \hline
+		%
+		sihost.exe (Shell Infrastructure Host)& Handles the graphical elements of the Windows UI, such as the Start Menu, taskbar transparency, and visual effects.\\ \hline
+		%
+		taskhostw.exe& A process that acts as a host for Windows processes that are not executables but rely on DLL files.\\ \hline
+		%
+		taskmgr.exe& The Task Manager, used to view and manage running processes, system performance, and applications.\\ \hline
+		%
+		dllhost.exe& The COM Surrogate process. It runs COM objects in a separate process to prevent crashes in applications.\\ \hline
+		%
+		NisSrv.exe& Part of Windows Defender, responsible for network protection features and security scanning.\\ \hline
+		%
+		makecab.exe& A command-line utility for creating CAB files, which are used for packaging and compressing files.\\ \hline
+		%
+		TrustedInstaller.exe& The service that installs, modifies, and removes system components and Windows updates.\\ \hline
+		%
+		TiWorker.exe& Windows Modules Installer Worker. It is responsible for installing and updating system components and updates.\\ \hline
+		%
+		WmiPrvSE.exe (WMI Provider Host)& Hosts Windows Management Instrumentation (WMI) providers, which provide management and monitoring capabilities.			\\ \hline
+
